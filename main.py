@@ -477,20 +477,20 @@ def modelo_ia_por_plan(plan_actual: str, es_admin: bool = False) -> str | None:
 
 def max_tokens_por_plan(plan_actual: str, es_admin: bool = False) -> int:
     if es_admin:
-        return 1800
+        return 800
 
     plan = (plan_actual or "gratis").lower().strip()
 
     if plan == "basico":
-        return 700
+        return 400
 
     if plan == "pro":
-        return 1200
+        return 800
 
     if plan == "premium":
-        return 1800
+        return 1200
 
-    return 700
+    return 400
 
 
 def verificar_creditos_ia(plan_usuario: dict):
